@@ -4,37 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PS3 Jailbreak Guide - Unlock Your Console's Potential</title>
+  <meta name="description" content="Complete guide to jailbreaking your PS3 on Windows and macOS. Get homebrew apps, tools, and step-by-step tutorials.">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body class="dark-mode">
   <!-- Header/Navigation -->
   <header class="cyberpunk-header">
     <div class="container">
-      <nav>
+      <nav aria-label="Main navigation">
         <div class="logo">
           <span class="neon-purple">PS3</span>HUB
         </div>
         <ul class="nav-links">
-          <li><a href="#home" class="neon-hover">Home</a></li>
+          <li><a href="#home" class="neon-hover" aria-current="page">Home</a></li>
           <li><a href="#guide" class="neon-hover">Jailbreak Guide</a></li>
           <li><a href="#homebrew" class="neon-hover">Homebrew</a></li>
           <li><a href="#tools" class="neon-hover">Tools</a></li>
-          <li><button id="theme-toggle" class="neon-button"><i class="fas fa-adjust"></i></button></li>
+          <li><button id="theme-toggle" class="neon-button" aria-label="Toggle dark mode"><i class="fas fa-adjust"></i></button></li>
         </ul>
-        <div class="hamburger">
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
-        </div>
+        </button>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="particles-js" id="particles-js"></div>
+    <div class="particles-js" id="particles-js" aria-hidden="true"></div>
     <div class="container">
       <h1 class="hero-title">
         <span class="neon-purple">Unlock Your PS3's Potential</span>
@@ -52,18 +54,18 @@
   <section id="guide" class="section">
     <div class="container">
       <h2 class="section-title">PS3 Jailbreaking Guide</h2>
-      <div class="tabs">
-        <button class="tab-button active" data-tab="windows">Windows</button>
-        <button class="tab-button" data-tab="macos">macOS</button>
+      <div class="tabs" role="tablist">
+        <button class="tab-button active" data-tab="windows" role="tab" aria-selected="true" aria-controls="windows">Windows</button>
+        <button class="tab-button" data-tab="macos" role="tab" aria-selected="false" aria-controls="macos">macOS</button>
       </div>
       
       <!-- Windows Guide Content -->
-      <div id="windows" class="tab-content active">
+      <div id="windows" class="tab-content active" role="tabpanel">
         <!-- Checklist will be inserted by JavaScript -->
       </div>
       
       <!-- macOS Guide Content -->
-      <div id="macos" class="tab-content">
+      <div id="macos" class="tab-content" role="tabpanel">
         <!-- Checklist will be inserted by JavaScript -->
       </div>
     </div>
@@ -73,11 +75,11 @@
   <section id="homebrew" class="section dark-bg">
     <div class="container">
       <h2 class="section-title">Homebrew App Gallery</h2>
-      <div class="filter-buttons">
-        <button class="filter-button active" data-filter="all">All</button>
-        <button class="filter-button" data-filter="emulator">Emulators</button>
-        <button class="filter-button" data-filter="utility">Utilities</button>
-        <button class="filter-button" data-filter="game">Games</button>
+      <div class="filter-buttons" role="group" aria-label="Filter homebrew apps">
+        <button class="filter-button active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-button" data-filter="emulator" aria-pressed="false">Emulators</button>
+        <button class="filter-button" data-filter="utility" aria-pressed="false">Utilities</button>
+        <button class="filter-button" data-filter="game" aria-pressed="false">Games</button>
       </div>
       <div class="homebrew-grid">
         <!-- Apps will be inserted by JavaScript -->
@@ -90,21 +92,24 @@
     <div class="container">
       <h2 class="section-title">Tools & Downloads</h2>
       <div class="search-box">
-        <input type="text" id="tool-search" placeholder="Search tools...">
+        <label for="tool-search" class="sr-only">Search tools</label>
+        <input type="text" id="tool-search" placeholder="Search tools..." aria-label="Search tools">
       </div>
-      <table class="tools-table">
-        <thead>
-          <tr>
-            <th>Tool Name</th>
-            <th>Version</th>
-            <th>Compatibility</th>
-            <th>Download</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Tools will be inserted by JavaScript -->
-        </tbody>
-      </table>
+      <div class="table-container">
+        <table class="tools-table" aria-label="PS3 Jailbreak Tools">
+          <thead>
+            <tr>
+              <th scope="col">Tool Name</th>
+              <th scope="col">Version</th>
+              <th scope="col">Compatibility</th>
+              <th scope="col">Download</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Tools will be inserted by JavaScript -->
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -126,20 +131,17 @@
         </div>
         <div class="footer-section">
           <h3>Support</h3>
-          <button class="donate-button">Donate <i class="fab fa-bitcoin"></i></button>
+          <button class="donate-button">Donate <i class="fab fa-bitcoin" aria-hidden="true"></i></button>
           <p class="last-updated">Last Updated: <span id="update-date"></span></p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 PS3HUB. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> PS3HUB. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/script.js"></script>
-  <!-- Add this right before </body> -->
-
-</div>
 </body>
 </html>
