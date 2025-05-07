@@ -680,7 +680,8 @@
   .floating {
     animation: float 3s ease-in-out infinite;
   }
-/* ===== SMOOTH TRANSITIONS ===== */
+
+  /* ===== SMOOTH TRANSITIONS ===== */
 html {
   scroll-behavior: smooth;
 }
