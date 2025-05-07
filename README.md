@@ -1,6 +1,8 @@
 # PS3 Jailbreak Guide Website
 
-![Website Preview](preview.jpg) *[Add screenshot of your website here]*
+<img width="1293" alt="preview" src="https://github.com/user-attachments/assets/b0a56fd3-12f8-4c84-b343-624858393e51" />
+
+
 
 A modern guide for PS3 jailbreaking, homebrew, and custom firmware with a cyberpunk design theme.
 
