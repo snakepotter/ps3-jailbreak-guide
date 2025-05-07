@@ -1,38 +1,4 @@
-// ===== SMOOTH NAVIGATION =====
-function handleNavigation() {
-  // Close mobile menu
-  document.querySelector('.hamburger').classList.remove('active');
-  document.querySelector('.nav-links').classList.remove('active');
-  
-  // Hide all sections
-  document.querySelectorAll('.section').forEach(section => {
-    section.classList.remove('active');
-  });
-  
-  // Show target section
-  setTimeout(() => {
-    const targetId = window.location.hash || '#home';
-    document.querySelector(targetId)?.classList.add('active');
-  }, 50);
-}
 
-// Setup event listeners
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    window.location.hash = this.getAttribute('href');
-    handleNavigation();
-  });
-});
-
-// Initialize first section
-window.addEventListener('load', () => {
-  document.querySelector(window.location.hash || '#home').classList.add('active');
-  setTimeout(() => {
-    document.getElementById('preloader')?.remove();
-  }, 1000);
-});
-window.addEventListener('hashchange', handleNavigation);
 /**
  * PS3 Jailbreak Guide - Main JavaScript File
  * 
